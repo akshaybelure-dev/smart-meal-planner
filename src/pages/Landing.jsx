@@ -89,14 +89,10 @@ useEffect(() => {
           <div className="landing__hero">
             <div className="landing__heroLeft">
               <div className="landing__imageCard">
-                <img
-                  className="landing__heroImage"
-                  src="/saladbowl.png"
-                  alt="Meal prep"
-                />
+                <img className="landing__heroImage" src={`${import.meta.env.BASE_URL}saladbowl.png`} alt="Meal prep" />
+
               </div>
             </div>
-
             <div className="landing__heroRight">
               <h1 className="landing__title">
                 Welcome to <br />
