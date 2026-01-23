@@ -42,7 +42,7 @@ import Grocery from "./pages/Grocery";
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/smart-meal-palnner">
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/onboarding" element={<Landing />} />
