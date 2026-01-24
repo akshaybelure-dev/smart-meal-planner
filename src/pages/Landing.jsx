@@ -70,7 +70,7 @@ useEffect(() => {
         <header className="landing__nav">
           <div className="landing__brand">
             <span className="landing__logoIcon">🍳</span>
-            <span className="landing__logoText">MealPrep</span>
+            <span className="landing__logoText">CurryCraft</span>
           </div>
 
           <nav className="landing__navLinks">

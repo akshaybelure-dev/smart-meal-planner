@@ -651,258 +651,539 @@ export const MEAL_DB = {
     ]
   },
 
+  // nonveg: {
+  //   Breakfast: [
+  //     {
+  //       name: "Chicken Omelette Bowl",
+  //       kcal: 420,
+  //       protein: 45,
+  //       time: 15,
+  //       ingredients: [
+  //         { key: "eggs", qty: 3, unit: "pc" },
+  //         { key: "chicken_breast", qty: 120, unit: "g" },
+  //         { key: "onion", qty: 60, unit: "g" },
+  //         { key: "tomato", qty: 80, unit: "g" },
+  //         { key: "oil", qty: 0.5, unit: "tbsp" },
+  //         { key: "spices_mix", qty: 6, unit: "g" }
+  //       ],
+  //       steps: [
+  //         "Cook chicken with salt and spices until done (or use pre-cooked chicken).",
+  //         "Beat eggs with salt and spices.",
+  //         "Sauté onion + tomato in oil for 1 minute.",
+  //         "Add chicken, then pour egg mix and cook until set."
+  //       ],
+  //       tags: ["nonVeg", "breakfast", "highProtein", "quick", "mealPrep"]
+  //     },
+  //     {
+  //       name: "Boiled Eggs + Chicken Salad",
+  //       kcal: 390,
+  //       protein: 44,
+  //       time: 10,
+  //       ingredients: [
+  //         { key: "eggs_boiled", qty: 3, unit: "pc" },
+  //         { key: "chicken_breast", qty: 150, unit: "g" },
+  //         { key: "cucumber", qty: 150, unit: "g" },
+  //         { key: "tomato", qty: 120, unit: "g" },
+  //         { key: "lemon", qty: 20, unit: "g" },
+  //         { key: "black_salt", qty: 2, unit: "g" }
+  //       ],
+  //       steps: [
+  //         "Slice boiled eggs.",
+  //         "Mix chicken + veggies in a bowl.",
+  //         "Add lemon + black salt and serve."
+  //       ],
+  //       tags: ["nonVeg", "breakfast", "highProtein", "noCook", "lowCal"]
+  //     },
+  //     {
+  //       name: "Greek Yogurt + Chicken Bowl",
+  //       kcal: 430,
+  //       protein: 50,
+  //       time: 8,
+  //       ingredients: [
+  //         { key: "greek_yogurt", qty: 200, unit: "g" },
+  //         { key: "chicken_breast", qty: 160, unit: "g" },
+  //         { key: "cucumber", qty: 150, unit: "g" },
+  //         { key: "lemon", qty: 20, unit: "g" },
+  //         { key: "pepper", qty: 1, unit: "g" }
+  //       ],
+  //       steps: [
+  //         "Add greek yogurt to a bowl.",
+  //         "Add cooked chicken pieces and cucumber.",
+  //         "Season with lemon + pepper and mix."
+  //       ],
+  //       tags: ["nonVeg", "breakfast", "highProtein", "mealPrep", "quick"]
+  //     },
+  //     {
+  //       name: "Chicken Sandwich (Light)",
+  //       kcal: 420,
+  //       protein: 38,
+  //       time: 10,
+  //       ingredients: [
+  //         { key: "bread", qty: 50, unit: "g" },
+  //         { key: "chicken_breast", qty: 140, unit: "g" },
+  //         { key: "curd_plain", qty: 60, unit: "g" },
+  //         { key: "onion", qty: 40, unit: "g" },
+  //         { key: "black_salt", qty: 2, unit: "g" },
+  //         { key: "pepper", qty: 1, unit: "g" }
+  //       ],
+  //       steps: [
+  //         "Mix shredded chicken with curd + salt + pepper.",
+  //         "Spread between bread slices.",
+  //         "Serve."
+  //       ],
+  //       tags: ["nonVeg", "breakfast", "highProtein", "noCook", "quick"]
+  //     }
+  //   ],
+
+  //   Lunch: [
+  //     {
+  //       name: "Chicken Curry + Rice (Small Rice)",
+  //       kcal: 560,
+  //       protein: 45,
+  //       time: 35,
+  //       ingredients: [
+  //         { key: "chicken_breast", qty: 200, unit: "g" },
+  //         { key: "rice_raw", qty: 25, unit: "g" },
+  //         { key: "onion", qty: 80, unit: "g" },
+  //         { key: "tomato", qty: 180, unit: "g" },
+  //         { key: "oil", qty: 0.5, unit: "tbsp" },
+  //         { key: "ginger_garlic_paste", qty: 10, unit: "g" },
+  //         { key: "spices_mix", qty: 7, unit: "g" }
+  //       ],
+  //       steps: [
+  //         "Cook rice and keep aside.",
+  //         "Heat oil, sauté onion + ginger-garlic paste.",
+  //         "Add tomato + spices and cook into masala.",
+  //         "Add chicken and cook until done.",
+  //         "Serve with small rice portion."
+  //       ],
+  //       tags: ["nonVeg", "lunch", "highProtein", "mealPrep"]
+  //     },
+  //     {
+  //       name: "Chicken Salad Bowl",
+  //       kcal: 420,
+  //       protein: 50,
+  //       time: 12,
+  //       ingredients: [
+  //         { key: "chicken_breast", qty: 200, unit: "g" },
+  //         { key: "cucumber", qty: 200, unit: "g" },
+  //         { key: "tomato", qty: 150, unit: "g" },
+  //         { key: "onion", qty: 60, unit: "g" },
+  //         { key: "lemon", qty: 20, unit: "g" },
+  //         { key: "black_salt", qty: 2, unit: "g" }
+  //       ],
+  //       steps: [
+  //         "Chop veggies and add to a bowl.",
+  //         "Add cooked chicken pieces.",
+  //         "Add lemon + salt and mix."
+  //       ],
+  //       tags: ["nonVeg", "lunch", "highProtein", "lowCal", "quick"]
+  //     },
+  //     {
+  //       name: "Chicken Bhurji + Roti",
+  //       kcal: 540,
+  //       protein: 46,
+  //       time: 25,
+  //       ingredients: [
+  //         { key: "chicken_breast", qty: 200, unit: "g" },
+  //         { key: "roti", qty: 2, unit: "pc" },
+  //         { key: "onion", qty: 80, unit: "g" },
+  //         { key: "tomato", qty: 180, unit: "g" },
+  //         { key: "oil", qty: 0.5, unit: "tbsp" },
+  //         { key: "spices_mix", qty: 7, unit: "g" }
+  //       ],
+  //       steps: [
+  //         "Heat oil and sauté onion.",
+  //         "Add tomato + spices and cook.",
+  //         "Add minced/shredded chicken and cook until done.",
+  //         "Serve with rotis."
+  //       ],
+  //       tags: ["nonVeg", "lunch", "highProtein", "mealPrep"]
+  //     },
+  //     {
+  //       name: "Chicken + Curd Bowl",
+  //       kcal: 460,
+  //       protein: 55,
+  //       time: 10,
+  //       ingredients: [
+  //         { key: "chicken_breast", qty: 220, unit: "g" },
+  //         { key: "curd_plain", qty: 200, unit: "g" },
+  //         { key: "cucumber", qty: 150, unit: "g" },
+  //         { key: "lemon", qty: 20, unit: "g" },
+  //         { key: "pepper", qty: 1, unit: "g" }
+  //       ],
+  //       steps: [
+  //         "Add curd to a bowl.",
+  //         "Add cooked chicken and cucumber.",
+  //         "Season with lemon + pepper and mix."
+  //       ],
+  //       tags: ["nonVeg", "lunch", "highProtein", "quick", "mealPrep"]
+  //     }
+  //   ],
+
+  //   Dinner: [
+  //     {
+  //       name: "Chicken Curry + Salad",
+  //       kcal: 430,
+  //       protein: 50,
+  //       time: 30,
+  //       ingredients: [
+  //         { key: "chicken_breast", qty: 200, unit: "g" },
+  //         { key: "onion", qty: 80, unit: "g" },
+  //         { key: "tomato", qty: 180, unit: "g" },
+  //         { key: "oil", qty: 0.5, unit: "tbsp" },
+  //         { key: "ginger_garlic_paste", qty: 10, unit: "g" },
+  //         { key: "spices_mix", qty: 7, unit: "g" },
+  //         { key: "cucumber", qty: 200, unit: "g" },
+  //         { key: "lemon", qty: 20, unit: "g" }
+  //       ],
+  //       steps: [
+  //         "Cook chicken curry using onion-tomato masala.",
+  //         "Serve with cucumber salad + lemon."
+  //       ],
+  //       tags: ["nonVeg", "dinner", "highProtein", "lowCal", "mealPrep"]
+  //     },
+  //     {
+  //       name: "Chicken Stir Fry + Veggies",
+  //       kcal: 410,
+  //       protein: 48,
+  //       time: 20,
+  //       ingredients: [
+  //         { key: "chicken_breast", qty: 200, unit: "g" },
+  //         { key: "capsicum", qty: 150, unit: "g" },
+  //         { key: "onion", qty: 80, unit: "g" },
+  //         { key: "oil", qty: 0.5, unit: "tbsp" },
+  //         { key: "spices_mix", qty: 6, unit: "g" }
+  //       ],
+  //       steps: [
+  //         "Heat oil and sauté onion + capsicum.",
+  //         "Add chicken pieces and cook until done.",
+  //         "Add spices and toss 1 minute."
+  //       ],
+  //       tags: ["nonVeg", "dinner", "highProtein", "quick", "lowCal"]
+  //     },
+  //     {
+  //       name: "Chicken + Rice (Small Rice)",
+  //       kcal: 520,
+  //       protein: 48,
+  //       time: 25,
+  //       ingredients: [
+  //         { key: "chicken_breast", qty: 200, unit: "g" },
+  //         { key: "rice_raw", qty: 15, unit: "g" },
+  //         { key: "onion", qty: 60, unit: "g" },
+  //         { key: "tomato", qty: 150, unit: "g" },
+  //         { key: "oil", qty: 0.5, unit: "tbsp" },
+  //         { key: "spices_mix", qty: 6, unit: "g" }
+  //       ],
+  //       steps: [
+  //         "Cook small rice portion and keep aside.",
+  //         "Cook chicken with onion-tomato masala.",
+  //         "Serve chicken with small rice portion."
+  //       ],
+  //       tags: ["nonVeg", "dinner", "highProtein", "mealPrep"]
+  //     },
+  //     {
+  //       name: "Fish Curry + Salad (Optional)",
+  //       kcal: 380,
+  //       protein: 40,
+  //       time: 25,
+  //       ingredients: [
+  //         { key: "fish", qty: 180, unit: "g" },
+  //         { key: "onion", qty: 60, unit: "g" },
+  //         { key: "tomato", qty: 150, unit: "g" },
+  //         { key: "oil", qty: 0.5, unit: "tbsp" },
+  //         { key: "spices_mix", qty: 6, unit: "g" },
+  //         { key: "cucumber", qty: 150, unit: "g" },
+  //         { key: "lemon", qty: 20, unit: "g" }
+  //       ],
+  //       steps: [
+  //         "Cook onion-tomato masala with spices.",
+  //         "Add fish and cook until done.",
+  //         "Serve with salad."
+  //       ],
+  //       tags: ["nonVeg", "dinner", "highProtein", "lowCal"]
+  //     }
+  //   ]
+  // }
   nonveg: {
-    Breakfast: [
-      {
-        name: "Chicken Omelette Bowl",
-        kcal: 420,
-        protein: 45,
-        time: 15,
-        ingredients: [
-          { key: "eggs", qty: 3, unit: "pc" },
-          { key: "chicken_breast", qty: 120, unit: "g" },
-          { key: "onion", qty: 60, unit: "g" },
-          { key: "tomato", qty: 80, unit: "g" },
-          { key: "oil", qty: 0.5, unit: "tbsp" },
-          { key: "spices_mix", qty: 6, unit: "g" }
-        ],
-        steps: [
-          "Cook chicken with salt and spices until done (or use pre-cooked chicken).",
-          "Beat eggs with salt and spices.",
-          "Sauté onion + tomato in oil for 1 minute.",
-          "Add chicken, then pour egg mix and cook until set."
-        ],
-        tags: ["nonVeg", "breakfast", "highProtein", "quick", "mealPrep"]
-      },
-      {
-        name: "Boiled Eggs + Chicken Salad",
-        kcal: 390,
-        protein: 44,
-        time: 10,
-        ingredients: [
-          { key: "eggs_boiled", qty: 3, unit: "pc" },
-          { key: "chicken_breast", qty: 150, unit: "g" },
-          { key: "cucumber", qty: 150, unit: "g" },
-          { key: "tomato", qty: 120, unit: "g" },
-          { key: "lemon", qty: 20, unit: "g" },
-          { key: "black_salt", qty: 2, unit: "g" }
-        ],
-        steps: [
-          "Slice boiled eggs.",
-          "Mix chicken + veggies in a bowl.",
-          "Add lemon + black salt and serve."
-        ],
-        tags: ["nonVeg", "breakfast", "highProtein", "noCook", "lowCal"]
-      },
-      {
-        name: "Greek Yogurt + Chicken Bowl",
-        kcal: 430,
-        protein: 50,
-        time: 8,
-        ingredients: [
-          { key: "greek_yogurt", qty: 200, unit: "g" },
-          { key: "chicken_breast", qty: 160, unit: "g" },
-          { key: "cucumber", qty: 150, unit: "g" },
-          { key: "lemon", qty: 20, unit: "g" },
-          { key: "pepper", qty: 1, unit: "g" }
-        ],
-        steps: [
-          "Add greek yogurt to a bowl.",
-          "Add cooked chicken pieces and cucumber.",
-          "Season with lemon + pepper and mix."
-        ],
-        tags: ["nonVeg", "breakfast", "highProtein", "mealPrep", "quick"]
-      },
-      {
-        name: "Chicken Sandwich (Light)",
-        kcal: 420,
-        protein: 38,
-        time: 10,
-        ingredients: [
-          { key: "bread", qty: 50, unit: "g" },
-          { key: "chicken_breast", qty: 140, unit: "g" },
-          { key: "curd_plain", qty: 60, unit: "g" },
-          { key: "onion", qty: 40, unit: "g" },
-          { key: "black_salt", qty: 2, unit: "g" },
-          { key: "pepper", qty: 1, unit: "g" }
-        ],
-        steps: [
-          "Mix shredded chicken with curd + salt + pepper.",
-          "Spread between bread slices.",
-          "Serve."
-        ],
-        tags: ["nonVeg", "breakfast", "highProtein", "noCook", "quick"]
-      }
-    ],
+  Breakfast: [
+    {
+      name: "Chicken Omelette Bowl",
+      kcal: 420,
+      protein: 45,
+      time: 15,
+      ingredients: [
+        { key: "eggs", qty: 3, unit: "pc" },
+        { key: "chicken_breast", qty: 120, unit: "g" },
+        { key: "onion", qty: 60, unit: "g" },
+        { key: "tomato", qty: 80, unit: "g" },
+        { key: "oil", qty: 0.5, unit: "tbsp" },
+        { key: "spices_mix", qty: 6, unit: "g" }
+      ],
+      steps: [
+        "Cook chicken with salt and spices until done (or use pre-cooked chicken).",
+        "Beat eggs with salt and spices.",
+        "Sauté onion + tomato in oil for 1 minute.",
+        "Add chicken, then pour egg mix and cook until set."
+      ],
+      tags: ["nonVeg", "breakfast", "highProtein", "quick", "mealPrep"]
+    },
 
-    Lunch: [
-      {
-        name: "Chicken Curry + Rice (Small Rice)",
-        kcal: 560,
-        protein: 45,
-        time: 35,
-        ingredients: [
-          { key: "chicken_breast", qty: 200, unit: "g" },
-          { key: "rice_raw", qty: 25, unit: "g" },
-          { key: "onion", qty: 80, unit: "g" },
-          { key: "tomato", qty: 180, unit: "g" },
-          { key: "oil", qty: 0.5, unit: "tbsp" },
-          { key: "ginger_garlic_paste", qty: 10, unit: "g" },
-          { key: "spices_mix", qty: 7, unit: "g" }
-        ],
-        steps: [
-          "Cook rice and keep aside.",
-          "Heat oil, sauté onion + ginger-garlic paste.",
-          "Add tomato + spices and cook into masala.",
-          "Add chicken and cook until done.",
-          "Serve with small rice portion."
-        ],
-        tags: ["nonVeg", "lunch", "highProtein", "mealPrep"]
-      },
-      {
-        name: "Chicken Salad Bowl",
-        kcal: 420,
-        protein: 50,
-        time: 12,
-        ingredients: [
-          { key: "chicken_breast", qty: 200, unit: "g" },
-          { key: "cucumber", qty: 200, unit: "g" },
-          { key: "tomato", qty: 150, unit: "g" },
-          { key: "onion", qty: 60, unit: "g" },
-          { key: "lemon", qty: 20, unit: "g" },
-          { key: "black_salt", qty: 2, unit: "g" }
-        ],
-        steps: [
-          "Chop veggies and add to a bowl.",
-          "Add cooked chicken pieces.",
-          "Add lemon + salt and mix."
-        ],
-        tags: ["nonVeg", "lunch", "highProtein", "lowCal", "quick"]
-      },
-      {
-        name: "Chicken Bhurji + Roti",
-        kcal: 540,
-        protein: 46,
-        time: 25,
-        ingredients: [
-          { key: "chicken_breast", qty: 200, unit: "g" },
-          { key: "roti", qty: 2, unit: "pc" },
-          { key: "onion", qty: 80, unit: "g" },
-          { key: "tomato", qty: 180, unit: "g" },
-          { key: "oil", qty: 0.5, unit: "tbsp" },
-          { key: "spices_mix", qty: 7, unit: "g" }
-        ],
-        steps: [
-          "Heat oil and sauté onion.",
-          "Add tomato + spices and cook.",
-          "Add minced/shredded chicken and cook until done.",
-          "Serve with rotis."
-        ],
-        tags: ["nonVeg", "lunch", "highProtein", "mealPrep"]
-      },
-      {
-        name: "Chicken + Curd Bowl",
-        kcal: 460,
-        protein: 55,
-        time: 10,
-        ingredients: [
-          { key: "chicken_breast", qty: 220, unit: "g" },
-          { key: "curd_plain", qty: 200, unit: "g" },
-          { key: "cucumber", qty: 150, unit: "g" },
-          { key: "lemon", qty: 20, unit: "g" },
-          { key: "pepper", qty: 1, unit: "g" }
-        ],
-        steps: [
-          "Add curd to a bowl.",
-          "Add cooked chicken and cucumber.",
-          "Season with lemon + pepper and mix."
-        ],
-        tags: ["nonVeg", "lunch", "highProtein", "quick", "mealPrep"]
-      }
-    ],
+    {
+      name: "Sprouts Salad + Paneer",
+      kcal: 520,
+      protein: 35,
+      time: 10,
+      ingredients: [
+        { key: "mixed_sprouts", qty: 150, unit: "g" },
+        { key: "paneer", qty: 100, unit: "g" },
+        { key: "onion", qty: 50, unit: "g" },
+        { key: "tomato", qty: 80, unit: "g" },
+        { key: "lemon", qty: 20, unit: "g" },
+        { key: "coriander", qty: 5, unit: "g" },
+        { key: "black_salt", qty: 2, unit: "g" }
+      ],
+      steps: [
+        "Add sprouts, chopped onion, and tomato to a bowl.",
+        "Add paneer cubes.",
+        "Add lemon juice, black salt, and coriander.",
+        "Mix well and serve."
+      ],
+      tags: ["nonVeg", "breakfast", "highProtein", "noCook", "quick"]
+    },
 
-    Dinner: [
-      {
-        name: "Chicken Curry + Salad",
-        kcal: 430,
-        protein: 50,
-        time: 30,
-        ingredients: [
-          { key: "chicken_breast", qty: 200, unit: "g" },
-          { key: "onion", qty: 80, unit: "g" },
-          { key: "tomato", qty: 180, unit: "g" },
-          { key: "oil", qty: 0.5, unit: "tbsp" },
-          { key: "ginger_garlic_paste", qty: 10, unit: "g" },
-          { key: "spices_mix", qty: 7, unit: "g" },
-          { key: "cucumber", qty: 200, unit: "g" },
-          { key: "lemon", qty: 20, unit: "g" }
-        ],
-        steps: [
-          "Cook chicken curry using onion-tomato masala.",
-          "Serve with cucumber salad + lemon."
-        ],
-        tags: ["nonVeg", "dinner", "highProtein", "lowCal", "mealPrep"]
-      },
-      {
-        name: "Chicken Stir Fry + Veggies",
-        kcal: 410,
-        protein: 48,
-        time: 20,
-        ingredients: [
-          { key: "chicken_breast", qty: 200, unit: "g" },
-          { key: "capsicum", qty: 150, unit: "g" },
-          { key: "onion", qty: 80, unit: "g" },
-          { key: "oil", qty: 0.5, unit: "tbsp" },
-          { key: "spices_mix", qty: 6, unit: "g" }
-        ],
-        steps: [
-          "Heat oil and sauté onion + capsicum.",
-          "Add chicken pieces and cook until done.",
-          "Add spices and toss 1 minute."
-        ],
-        tags: ["nonVeg", "dinner", "highProtein", "quick", "lowCal"]
-      },
-      {
-        name: "Chicken + Rice (Small Rice)",
-        kcal: 520,
-        protein: 48,
-        time: 25,
-        ingredients: [
-          { key: "chicken_breast", qty: 200, unit: "g" },
-          { key: "rice_raw", qty: 15, unit: "g" },
-          { key: "onion", qty: 60, unit: "g" },
-          { key: "tomato", qty: 150, unit: "g" },
-          { key: "oil", qty: 0.5, unit: "tbsp" },
-          { key: "spices_mix", qty: 6, unit: "g" }
-        ],
-        steps: [
-          "Cook small rice portion and keep aside.",
-          "Cook chicken with onion-tomato masala.",
-          "Serve chicken with small rice portion."
-        ],
-        tags: ["nonVeg", "dinner", "highProtein", "mealPrep"]
-      },
-      {
-        name: "Fish Curry + Salad (Optional)",
-        kcal: 380,
-        protein: 40,
-        time: 25,
-        ingredients: [
-          { key: "fish", qty: 180, unit: "g" },
-          { key: "onion", qty: 60, unit: "g" },
-          { key: "tomato", qty: 150, unit: "g" },
-          { key: "oil", qty: 0.5, unit: "tbsp" },
-          { key: "spices_mix", qty: 6, unit: "g" },
-          { key: "cucumber", qty: 150, unit: "g" },
-          { key: "lemon", qty: 20, unit: "g" }
-        ],
-        steps: [
-          "Cook onion-tomato masala with spices.",
-          "Add fish and cook until done.",
-          "Serve with salad."
-        ],
-        tags: ["nonVeg", "dinner", "highProtein", "lowCal"]
-      }
-    ]
-  }
+    {
+      name: "Soya Chunks Salad",
+      kcal: 320,
+      protein: 28,
+      time: 15,
+      ingredients: [
+        { key: "soya_chunks", qty: 50, unit: "g" },
+        { key: "onion", qty: 50, unit: "g" },
+        { key: "tomato", qty: 80, unit: "g" },
+        { key: "lemon", qty: 20, unit: "g" },
+        { key: "coriander", qty: 5, unit: "g" },
+        { key: "black_salt", qty: 2, unit: "g" }
+      ],
+      steps: [
+        "Soak soya chunks in hot water for 10 minutes.",
+        "Squeeze out water completely and cool them down.",
+        "Mix with onion, tomato, lemon juice, salt, and coriander.",
+        "Serve immediately or refrigerate for meal prep."
+      ],
+      tags: ["nonVeg", "breakfast", "highProtein", "mealPrep", "quick"]
+    },
+
+    {
+      name: "Chicken Sandwich (Light)",
+      kcal: 420,
+      protein: 38,
+      time: 10,
+      ingredients: [
+        { key: "bread", qty: 50, unit: "g" },
+        { key: "chicken_breast", qty: 140, unit: "g" },
+        { key: "curd_plain", qty: 60, unit: "g" },
+        { key: "onion", qty: 40, unit: "g" },
+        { key: "black_salt", qty: 2, unit: "g" },
+        { key: "pepper", qty: 1, unit: "g" }
+      ],
+      steps: [
+        "Mix shredded chicken with curd + salt + pepper.",
+        "Spread between bread slices.",
+        "Serve."
+      ],
+      tags: ["nonVeg", "breakfast", "highProtein", "noCook", "quick"]
+    }
+  ],
+
+  Lunch: [
+    {
+      name: "Chicken Curry + Rice (Small Rice)",
+      kcal: 560,
+      protein: 45,
+      time: 35,
+      ingredients: [
+        { key: "chicken_breast", qty: 200, unit: "g" },
+        { key: "rice_raw", qty: 25, unit: "g" },
+        { key: "onion", qty: 80, unit: "g" },
+        { key: "tomato", qty: 180, unit: "g" },
+        { key: "oil", qty: 0.5, unit: "tbsp" },
+        { key: "ginger_garlic_paste", qty: 10, unit: "g" },
+        { key: "spices_mix", qty: 7, unit: "g" }
+      ],
+      steps: [
+        "Cook rice and keep aside.",
+        "Heat oil, sauté onion + ginger-garlic paste.",
+        "Add tomato + spices and cook into masala.",
+        "Add chicken and cook until done.",
+        "Serve with small rice portion."
+      ],
+      tags: ["nonVeg", "lunch", "highProtein", "mealPrep"]
+    },
+
+    {
+      name: "Paneer Salad Bowl",
+      kcal: 520,
+      protein: 33,
+      time: 10,
+      ingredients: [
+        { key: "paneer", qty: 150, unit: "g" },
+        { key: "cucumber", qty: 150, unit: "g" },
+        { key: "tomato", qty: 120, unit: "g" },
+        { key: "onion", qty: 50, unit: "g" },
+        { key: "lemon", qty: 20, unit: "g" },
+        { key: "black_salt", qty: 2, unit: "g" },
+        { key: "pepper", qty: 1, unit: "g" }
+      ],
+      steps: [
+        "Chop cucumber, tomato, and onion.",
+        "Add paneer cubes to a bowl.",
+        "Add lemon juice, black salt, and pepper.",
+        "Mix and serve."
+      ],
+      tags: ["nonVeg", "lunch", "highProtein", "noCook", "quick", "lowCal"]
+    },
+
+    {
+      name: "Paneer Bhurji + Roti",
+      kcal: 680,
+      protein: 40,
+      time: 25,
+      ingredients: [
+        { key: "paneer", qty: 180, unit: "g" },
+        { key: "roti", qty: 2, unit: "pc" },
+        { key: "onion", qty: 80, unit: "g" },
+        { key: "tomato", qty: 150, unit: "g" },
+        { key: "oil", qty: 0.5, unit: "tbsp" },
+        { key: "spices_mix", qty: 6, unit: "g" }
+      ],
+      steps: [
+        "Heat oil in a pan and sauté onion until light golden.",
+        "Add tomato + spices and cook until soft.",
+        "Add crumbled paneer and cook for 5–7 minutes.",
+        "Serve hot with rotis."
+      ],
+      tags: ["nonVeg", "lunch", "highProtein", "quick"]
+    },
+
+    {
+      name: "Chicken + Curd Bowl",
+      kcal: 460,
+      protein: 55,
+      time: 10,
+      ingredients: [
+        { key: "chicken_breast", qty: 220, unit: "g" },
+        { key: "curd_plain", qty: 200, unit: "g" },
+        { key: "cucumber", qty: 150, unit: "g" },
+        { key: "lemon", qty: 20, unit: "g" },
+        { key: "pepper", qty: 1, unit: "g" }
+      ],
+      steps: [
+        "Add curd to a bowl.",
+        "Add cooked chicken and cucumber.",
+        "Season with lemon + pepper and mix."
+      ],
+      tags: ["nonVeg", "lunch", "highProtein", "quick", "mealPrep"]
+    }
+  ],
+
+  Dinner: [
+    {
+      name: "Chicken Curry + Salad",
+      kcal: 430,
+      protein: 50,
+      time: 30,
+      ingredients: [
+        { key: "chicken_breast", qty: 200, unit: "g" },
+        { key: "onion", qty: 80, unit: "g" },
+        { key: "tomato", qty: 180, unit: "g" },
+        { key: "oil", qty: 0.5, unit: "tbsp" },
+        { key: "ginger_garlic_paste", qty: 10, unit: "g" },
+        { key: "spices_mix", qty: 7, unit: "g" },
+        { key: "cucumber", qty: 200, unit: "g" },
+        { key: "lemon", qty: 20, unit: "g" }
+      ],
+      steps: [
+        "Cook chicken curry using onion-tomato masala.",
+        "Serve with cucumber salad + lemon."
+      ],
+      tags: ["nonVeg", "dinner", "highProtein", "lowCal", "mealPrep"]
+    },
+
+    {
+      name: "Paneer Stir Fry + Salad",
+      kcal: 520,
+      protein: 35,
+      time: 20,
+      ingredients: [
+        { key: "paneer", qty: 150, unit: "g" },
+        { key: "capsicum", qty: 120, unit: "g" },
+        { key: "onion", qty: 60, unit: "g" },
+        { key: "tomato", qty: 100, unit: "g" },
+        { key: "oil", qty: 0.5, unit: "tbsp" },
+        { key: "spices_mix", qty: 5, unit: "g" },
+        { key: "cucumber", qty: 150, unit: "g" },
+        { key: "lemon", qty: 20, unit: "g" }
+      ],
+      steps: [
+        "Heat oil in a pan and sauté onion.",
+        "Add capsicum and cook 3–4 minutes.",
+        "Add tomato + spices and cook 2 minutes.",
+        "Add paneer cubes and toss for 3–4 minutes.",
+        "Serve with cucumber salad + lemon."
+      ],
+      tags: ["nonVeg", "dinner", "highProtein", "lowCal", "quick"]
+    },
+
+    {
+      name: "Soya Chunk Curry + Rice (Small Rice)",
+      kcal: 430,
+      protein: 34,
+      time: 30,
+      ingredients: [
+        { key: "soya_chunks", qty: 60, unit: "g" },
+        { key: "rice_raw", qty: 15, unit: "g" },
+        { key: "onion", qty: 70, unit: "g" },
+        { key: "tomato", qty: 150, unit: "g" },
+        { key: "oil", qty: 0.5, unit: "tbsp" },
+        { key: "ginger_garlic_paste", qty: 10, unit: "g" },
+        { key: "spices_mix", qty: 6, unit: "g" },
+        { key: "cucumber", qty: 150, unit: "g" },
+        { key: "lemon", qty: 20, unit: "g" }
+      ],
+      steps: [
+        "Cook rice and keep aside.",
+        "Soak soya chunks in hot water for 10 minutes, then squeeze out water.",
+        "Heat oil, sauté onion + ginger-garlic paste.",
+        "Add tomato + spices and cook into thick masala.",
+        "Add soya chunks and simmer 6–8 minutes.",
+        "Serve soya curry with a small portion of rice + cucumber salad + lemon."
+      ],
+      tags: ["nonVeg", "dinner", "highProtein", "mealPrep", "lowCal"]
+    },
+
+    {
+      name: "Fish Curry + Salad (Optional)",
+      kcal: 380,
+      protein: 40,
+      time: 25,
+      ingredients: [
+        { key: "fish", qty: 180, unit: "g" },
+        { key: "onion", qty: 60, unit: "g" },
+        { key: "tomato", qty: 150, unit: "g" },
+        { key: "oil", qty: 0.5, unit: "tbsp" },
+        { key: "spices_mix", qty: 6, unit: "g" },
+        { key: "cucumber", qty: 150, unit: "g" },
+        { key: "lemon", qty: 20, unit: "g" }
+      ],
+      steps: [
+        "Cook onion-tomato masala with spices.",
+        "Add fish and cook until done.",
+        "Serve with salad."
+      ],
+      tags: ["nonVeg", "dinner", "highProtein", "lowCal"]
+    }
+  ]
+}
+
 };
