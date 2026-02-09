@@ -11,7 +11,6 @@ export default function Landing() {
   const [animateOpen, setAnimateOpen] = useState(false);
 
 
-  // open modal automatically if user goes to /onboarding
  useEffect(() => {
   if (location.pathname === "/onboarding") {
     setIsModalOpen(true);
@@ -20,7 +19,6 @@ export default function Landing() {
 
 useEffect(() => {
   if (isModalOpen) {
-    // next frame: trigger animation
     requestAnimationFrame(() => setAnimateOpen(true));
   } else {
     setAnimateOpen(false);
@@ -34,7 +32,6 @@ useEffect(() => {
 
   function closeModal() {
     setIsModalOpen(false);
-    // if user is on /onboarding, bring them back to /
     if (location.pathname === "/onboarding") {
       navigate("/", { replace: true });
     }
@@ -66,7 +63,6 @@ useEffect(() => {
   return (
     <div className="landing">
       <div className="landing__frame">
-        {/* Navbar */}
         <header className="landing__nav">
           <div className="landing__brand">
             <span className="landing__logoIcon">🍳</span>
@@ -84,7 +80,6 @@ useEffect(() => {
           </nav>
         </header>
 
-        {/* Main */}
         <main className="landing__main">
           <div className="landing__hero">
             <div className="landing__heroLeft">
@@ -112,7 +107,6 @@ useEffect(() => {
           </div>
         </main>
 
-        {/* Footer */}
         <footer className="landing__footer">
           <div className="landing__footerLeft">
             © 2026 MealPrep. All rights reserved.
@@ -144,7 +138,6 @@ useEffect(() => {
         </footer>
       </div>
 
-      {/* MODAL */}
       {isModalOpen && (
         <div
   className={`modalOverlay ${animateOpen ? "modalOverlay--open" : ""}`}
@@ -170,7 +163,6 @@ useEffect(() => {
             </div>
 
             <div className="modalForm">
-              {/* Name */}
               <div className="field">
                 <label className="fieldLabel">Name</label>
                 <input
@@ -181,7 +173,6 @@ useEffect(() => {
                 />
               </div>
 
-              {/* Goal */}
               <div className="field">
                 <label className="fieldLabel">Goal</label>
                 <select
@@ -195,7 +186,6 @@ useEffect(() => {
                 </select>
               </div>
 
-              {/* Diet */}
               <div className="field">
                 <label className="fieldLabel">Diet</label>
                 <select
